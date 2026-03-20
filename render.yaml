@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: mc-bot-api
+    runtime: node
+    rootDir: .
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: BOT_HOST
+        sync: false
+      - key: BOT_PORT
+        value: "25565"
+      - key: BOT_USERNAME
+        sync: false
+      - key: BOT_PASSWORD_INGAME
+        sync: false
+      - key: DASHBOARD_PASSWORD
+        sync: false
+      - key: API_PORT
+        value: "10000"
+      - key: DASHBOARD_URL
+        sync: false
+      - key: REPO_URL
+        sync: false
